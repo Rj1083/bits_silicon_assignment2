@@ -25,6 +25,7 @@ module sync_fifo #(parameter integer DATA_WIDTH=8, parameter integer DEPTH=16, p
             wr_ptr<=0;
             rd_ptr<=0;
             internal_count<=0;
+            rd_data<=0;
         end
 	else begin
             case ({wr_en && !wr_full, rd_en && !rd_empty})
